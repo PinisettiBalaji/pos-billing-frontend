@@ -7,20 +7,9 @@ import { InventoryComponent } from './components/inventory/inventory.component';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent }, // Login page outside layout
-
-  // Layout routes protected by AuthGuard
-  {
-    path: '',
-    component: LayoutComponent,
-    canActivate: [AuthGuard],
-    children: [
-      { path: 'billing', component: BillingComponent },
-      { path: 'inventory', component: InventoryComponent },
-      // Add additional routes here
-    ]
-  },
-
+  { path: 'login', component: LoginComponent },
+  { path: 'billing', component: BillingComponent },
+  { path: 'inventory', component: InventoryComponent },
   { path: '', redirectTo: '/billing', pathMatch: 'full' }, // Default route
   { path: '**', redirectTo: '/billing' } // Fallback route for invalid paths
 
