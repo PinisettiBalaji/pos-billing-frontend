@@ -1,7 +1,8 @@
 export interface Item {
+    id: number;
     name: string;
     price: number;
-    quantity: number;
-    category: string;
-  }
-  
+    quantity?: number;
+    category?: string;
+    stockLevel?: number;
+}

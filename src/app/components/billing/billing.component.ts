@@ -14,7 +14,7 @@ export class BillingComponent {
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    this.itemService.getItems().subscribe(data => {
+    this.itemService.getItems().subscribe((data: Item[]) => {
       this.items = data;
     });
   }

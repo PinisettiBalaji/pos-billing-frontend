@@ -1,0 +1,57 @@
+// src/app/components/inventory/inventory.component.scss
+
+.card {
+    border: 1px solid $primary-color;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .mat-form-field {
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 200px;
+        }
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}
+
+table {
+    width: 100%;
+    margin-top: 2rem;
+
+    thead {
+        background-color: $primary-color;
+        color: #fff;
+
+        th {
+            padding: 0.75rem;
+            text-align: left;
+        }
+    }
+
+    tbody {
+        tr {
+            &:hover {
+                background-color: rgba($primary-color, 0.1);
+            }
+
+            td {
+                padding: 0.75rem;
+            }
+        }
+    }
+}

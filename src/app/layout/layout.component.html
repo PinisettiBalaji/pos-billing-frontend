@@ -1,0 +1,29 @@
+<!-- src/app/components/layout/layout.component.html -->
+<div class="container-fluid dashboard-container">
+    <!-- Sidebar with Angular Material's MatNavList for styling -->
+    <mat-sidenav-container class="sidenav-container" autosize>
+        <mat-sidenav mode="side" opened>
+            <div class="sidebar-header text-center p-3">
+                <h3>Dashboard</h3>
+            </div>
+            <mat-nav-list>
+                <a mat-list-item routerLink="/billing" routerLinkActive="active-link">
+                    <mat-icon>receipt</mat-icon>
+                    <span>Billing</span>
+                </a>
+                <a mat-list-item routerLink="/inventory" routerLinkActive="active-link">
+                    <mat-icon>inventory</mat-icon>
+                    <span>Inventory</span>
+                </a>
+                <!-- Add other links here -->
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <!-- Main Content Area -->
+        <mat-sidenav-content>
+            <div class="main-content p-3">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
